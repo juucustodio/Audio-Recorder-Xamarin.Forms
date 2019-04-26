@@ -2,9 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:AudioDemo" 
-             x:Class="AudioDemo.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+             x:Class="AudioDemo.MainPage" Padding="20,80,20,0">
+    
+    <StackLayout  Spacing="15">
+            <StackLayout Orientation="Horizontal">
+                <Switch x:Name="TimeoutSwitch" IsToggled="True" />
+                <Label Text="Parar após silêncio?" />
+            </StackLayout>
+            <Button x:Name="GravarButton" Text="Gravar" HorizontalOptions="FillAndExpand" Clicked="Gravar_Clicked" />
+            <Button x:Name="ReproduzirButton" Text="Reproduzir"  HorizontalOptions="FillAndExpand" Clicked="Reproduzir_Clicked" IsEnabled="False" />
+     </StackLayout>
 </ContentPage>
